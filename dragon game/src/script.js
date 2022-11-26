@@ -14,8 +14,8 @@ const xpText = document.querySelector("#xpText");
 const healthText = document.querySelector("#healthText");
 const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
-const monsterName = document.querySelector("#monsterName");
-const monsterHealth = document.querySelector("#monsterHealth");
+const monsterNameText = document.querySelector("#monsterName");
+const monsterHealthText = document.querySelector("#monsterHealth");
 
 const weapons = [
     {
@@ -34,7 +34,7 @@ const weapons = [
         name: "sword",
         power: 100
     }
-];
+]
 
 const monsters = [
     {
@@ -52,7 +52,7 @@ const monsters = [
                 level: 20,
                 health: 300
             },
-];
+]
 
 const locations = [
     {
@@ -100,7 +100,7 @@ const locations = [
                 text: "You defeated the dragon! YOU WON! "
         },
         {
-        name "easter egg",
+        name: "easter egg",
         "button text": ["2","8","Go to town square"],
         "button functions":[pickTwo, pickEight, goTown],
         text: "You found a secret game. Pick a number. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, You Win!!"
@@ -119,8 +119,8 @@ button1.innerText = location["button text"][0];
 button2.innerText = location["button text"][1];
 button3.innerText = location["button text"][2];
 button1.onclick = location["button functions"][0];
-button2.onclick = location["button text"][1];
-button3.onclick = location["button text"][2];
+button2.onclick = location["button functions"][1];
+button3.onclick = location["button functions"][2];
 text.innerText = location.text;
 }
 
@@ -161,15 +161,15 @@ if (currentWeapon < weapons.length - 1) {
            text.innerText = "You now have a " + newWeapon + ".";
            inventory.push(newWeapon);
            text.innerText += "In your inventory you have: " + inventory;
-    }   else {
+    }  else {
             text.innerText = "You do not have enough gold to buy a weapon.";
-    }   else  {
+            }
+    }   else {
             text.innerText = "You already have the most powerful weapon!";
             button2.innerText = "Sell weapon for 15 gold";
             button2.onclick = sellWeapon;
     }
     }
-}
 
 function sellWeapon () {
     if (inventory.length > 1) {
@@ -279,7 +279,7 @@ currentWeapon = 0;
 inventory = ["stick"];
 goldText.innerText = gold;
 healthText.innerText = health;
-xpText.innerText= xp;
+xpText.innerText = xp;
 goTown();
 }
 
