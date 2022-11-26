@@ -99,7 +99,7 @@ const locations = [
                 "button functions": [restart,restart,restart],
                 text: "You defeated the dragon! YOU WON! "
         }
-]
+];
 
 //initialize buttons
 
