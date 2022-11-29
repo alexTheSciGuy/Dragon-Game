@@ -1,0 +1,1 @@
+use src/dragon game file index.html and open in web browser to play the game.
